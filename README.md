@@ -1,43 +1,12 @@
-# 🌍 Landslide-early-detection
+#  Landslide-early-detection
 
-**Real-Time Landslide Segmentation using Sentinel-1 SAR Imagery**
+## Overview 
+    This project presents a real-time landslide detection system using SAR (Synthetic Aperture Radar) satellite imagery and a deep learning-based segmentation model. By combining EfficientNet-B0 (CNN) and Swin Transformer, the model effectively captures both spatial and contextual features from pre- and post-event SAR images. The system aims to provide early warnings and enable live monitoring of landslide-prone areas, offering a scalable solution for disaster management and mitigation.
 
-> A deep learning system designed for **early detection and segmentation** of landslides using pre- and post-event Sentinel-1 SAR data. This solution integrates **EfficientNet-B0**, **Swin Transformer**, and **real-time prediction** capabilities, developed for scalable disaster response.
 
----
+## Problem Statement 
+    Landslides pose a serious threat to life, infrastructure, and the environment, especially in hilly and high-rainfall regions. Traditional monitoring methods are either manual, delayed, or limited in coverage. There is a critical need for an automated, real-time system that can detect landslides early using remote sensing data.This project addresses the challenge of developing a deep learning-based landslide detection system that can process pre- and post-event SAR images to segment affected regions accurately, with the goal of enabling early warning and live situational awareness.
 
-## 🧠 Model Overview
-
-- **Dual Encoder**:  
-  - `EfficientNet-B0`: Captures spatial features  
-  - `Swin Transformer`: Captures contextual, long-range dependencies  
-
-- **Fusion Module**: Transformer-Conv based merging of encoder outputs  
-- **Input**: 2-channel SAR (Pre-Event + Post-Event `.tif`)  
-- **Output**: 1-channel segmentation mask (224×224)  
-- **Loss**: Hybrid Dice + Focal + SCL  
-- **Post-Processing**: Thresholding, CRF (optional)
-
----
-
-## 🗂️ Folder Structure
-
-    ├── sar_pre_event_images/ │   
-    ├── pre_.tif 
-    ├── sar_post_event_images/ │
-    ├── post_.tif 
-    ├── pre_mask/ │
-    ├── pre_mask_.tif 
-    ├── post_mask/ │ 
-    ├── post_.tif 
-    ├── best_model.pth
-    ├── main.py 
-    ├── utils/ │ 
-    ├── dataset.py 
-    ├── model.py 
-    │ └── train.py
-
----
 
 ## 🚀 Features
 

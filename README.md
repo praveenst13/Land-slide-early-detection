@@ -22,7 +22,20 @@
 
 ## 🗂️ Folder Structure
 
-├── sar_pre_event_images/ │ ├── pre_.tif ├── sar_post_event_images/ │ ├── post_.tif ├── pre_mask/ │ ├── pre_mask_.tif ├── post_mask/ │ ├── post_.tif ├── best_model.pth ├── main.py ├── utils/ │ ├── dataset.py │ ├── model.py │ └── train.py
+├── sar_pre_event_images/ │   
+├── pre_.tif 
+├── sar_post_event_images/ │
+├── post_.tif 
+├── pre_mask/ │
+├── pre_mask_.tif 
+├── post_mask/ │ 
+├── post_.tif 
+├── best_model.pth
+├── main.py 
+├── utils/ │ 
+├── dataset.py 
+├── model.py 
+│ └── train.py
 
 ---
 
@@ -98,16 +111,42 @@ IoU Score
 Sample Predictions
 
 ## 👥 Team Members
-Name	            Role
-Praveen	            SAR Preprocessing, Lead Developer
-Madhavan	        Data Engineering, Testing
-Baskaran	        Model Integration, Evaluation
-Harish Ragavendra	Visualization & Live Monitoring
+      Name	                  Role
+      Praveen	                SAR Preprocessing, Lead Developer
+      Madhavan	              Data Engineering, Testing
+      Baskaran	              Model Integration, Evaluation
+      Harish Ragavendra	      Visualization & Live Monitoring
 ## Sample Results
 Pre-Event	Post-Event	Predicted Mask
 ## Future Enhancements
-Integrate with Google Earth Engine for real-time SAR feed
 
-Add anomaly suppression and CRF post-processing
+1. 🌐 Integration with Google Earth Engine (GEE)
+Why: To access real-time Sentinel-1 SAR data without downloading files manually
+Benefit: Enables fully automated live monitoring of landslide-prone areas
 
-Multi-temporal data support for early warning system
+2. 🧪 Anomaly Suppression + CRF Post-Processing
+Why: Deep models may still misclassify rough terrain or shadows as landslides
+What we’ll add:
+
+Anomaly suppression: Eliminate false positives using terrain masks
+
+CRF (Conditional Random Field): Sharpen segmentation masks by refining boundaries
+Benefit: Increases prediction reliability and mask clarity
+
+3. 🕒 Multi-Temporal Data Support for Early Warning
+Why: One pair of SAR images may not be enough to predict slow-developing landslides
+What we’ll add:
+
+Use multiple time steps of SAR data to observe deformation patterns
+
+Integrate time series modeling to predict landslide likelihood
+Benefit: Transforms the system from event detection to early warning system
+
+Bonus Plan 🚧: EfficientNet + Swin + U-Net Decoder
+We plan to add a U-Net-style decoder for better upsampling and fine detail recovery:
+
+Keeps skip connections
+
+Enhances mask sharpness
+
+Maintains real-time capability

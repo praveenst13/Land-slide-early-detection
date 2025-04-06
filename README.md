@@ -1,4 +1,4 @@
-# 🌍 Land-slide-early-detection
+# 🌍 Landslide-early-detection
 
 **Real-Time Landslide Segmentation using Sentinel-1 SAR Imagery**
 

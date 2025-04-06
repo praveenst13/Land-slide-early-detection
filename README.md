@@ -22,20 +22,20 @@
 
 ## 🗂️ Folder Structure
 
-├── sar_pre_event_images/ │   
-├── pre_.tif 
-├── sar_post_event_images/ │
-├── post_.tif 
-├── pre_mask/ │
-├── pre_mask_.tif 
-├── post_mask/ │ 
-├── post_.tif 
-├── best_model.pth
-├── main.py 
-├── utils/ │ 
-├── dataset.py 
-├── model.py 
-│ └── train.py
+    ├── sar_pre_event_images/ │   
+    ├── pre_.tif 
+    ├── sar_post_event_images/ │
+    ├── post_.tif 
+    ├── pre_mask/ │
+    ├── pre_mask_.tif 
+    ├── post_mask/ │ 
+    ├── post_.tif 
+    ├── best_model.pth
+    ├── main.py 
+    ├── utils/ │ 
+    ├── dataset.py 
+    ├── model.py 
+    │ └── train.py
 
 ---
 

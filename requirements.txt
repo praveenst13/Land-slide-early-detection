@@ -1,0 +1,15 @@
+fastapi
+uvicorn
+torch
+numpy
+Pillow
+requests
+scikit-image
+matplotlib
+google-auth
+geemap
+earthengine-api
+python-multipart
+requests
+streamlit
+

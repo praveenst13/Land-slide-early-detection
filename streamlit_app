@@ -1,0 +1,29 @@
+import streamlit as st
+import torch
+from app.model_loader import SegmentationModel
+from app.predictor import predict
+from PIL import Image
+import numpy as np
+
+# Load the model
+@st.cache_resource
+def load_model():
+    model = SegmentationModel()
+    model.load_state_dict(torch.load("best_model.pth", map_location="cpu"))
+    model.eval()
+    return model
+
+model = load_model()
+
+st.title("🌍 Realtime Landslide Predictor")
+st.write("Upload a pre/post-event SAR image to detect landslide-prone areas.")
+
+uploaded_file = st.file_uploader("Upload SAR Image (GeoTIFF or PNG)", type=["tif", "tiff", "png", "jpg"])
+
+if uploaded_file is not None:
+    image = Image.open(uploaded_file).convert("RGB")
+    st.image(image, caption="Input SAR Image", use_column_width=True)
+
+    prediction = predict(model, image)
+    st.subheader("Landslide Risk Map")
+    st.image(prediction, caption="Predicted Mask", use_column_width=True)

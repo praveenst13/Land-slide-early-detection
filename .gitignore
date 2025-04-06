@@ -1,0 +1,10 @@
+# Ignore model files, data, logs, etc.
+*.pth
+*.pt
+*.h5
+__pycache__/
+*.log
+.env
+*.tif
+*.tiff
+*.zip

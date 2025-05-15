@@ -1,4 +1,4 @@
-#  Landslide-early-detectio
+#  Landslide-early-detection
 
 ## Overview 
    This project presents a real-time landslide detection system using SAR (Synthetic Aperture Radar) satellite imagery, leveraging deep learning-based segmentation. The model combines EfficientNet-B0 (CNN) and Swin Transformer to extract both spatial and contextual features from pre- and post-event SAR images. For implementation, Google Colab is used for model training and inference, while live SAR data is accessed through Google Earth Engine (GEE). The system is designed for early warning and continuous monitoring of landslide-prone regions, offering a scalable and practical solution for disaster management and mitigation.
